@@ -73,6 +73,7 @@ export const setAuthRedirectPath = (path) => {
     };
 };
 
+// prevents auto logout when user reloads the app 
 export const authCheckState = () => {
     return dispatch => {
         const token = localStorage.getItem('token');

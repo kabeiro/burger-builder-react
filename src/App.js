@@ -7,6 +7,7 @@ import BurgerBuilder from './containers/BurgerBuilder';
 import Logout from './containers/Auth/Logout/Logout';
 import * as actions from './store/actions/index';
 
+// loads components asynchronically (on demand)
 const asyncCheckout = asyncComponent(() => {
   return import('./containers/Checkout/Checkout');
 });

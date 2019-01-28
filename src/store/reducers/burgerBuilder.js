@@ -12,7 +12,9 @@ const INGREDIENT_PRICES = {
     salad: 0.5,
     cheese: 0.4,
     meat: 1.3,
-    bacon: 0.7
+    bacon: 0.7,
+    tomatoes: 0.3,
+    pickles: 0.5
 };
 
 const reducer = (state = initialState, action) => {
@@ -41,6 +43,8 @@ const reducer = (state = initialState, action) => {
                     // added one by one to reach correct order
                     salad: action.ingredients.salad,
                     bacon: action.ingredients.bacon,
+                    pickles: action.ingredients.pickles,
+                    tomatoes: action.ingredients.tomatoes,
                     cheese: action.ingredients.cheese,
                     meat: action.ingredients.meat
                 },

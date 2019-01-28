@@ -44,6 +44,7 @@ class Auth extends Component {
     }
     
     componentDidMount() {
+        // redirects directly to chechout in case the user started building burger before signing up
         if(!this.props.buildingBurger && this.props.authRedirectPath !== '/') {
             this.props.onSetAuthRedirectPath();
         }
@@ -66,6 +67,7 @@ class Auth extends Component {
     }
     
     switchAuthModeHandler = () => {
+        // switch from signing up to signing in mode
         this.setState(prevState => {
             return { isSignUp: !prevState.isSignUp };
         });

@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './Input.css';
 
 const input = (props) => {
-    let inputElement = null;
     const inputClasses = [classes.InputElement];
     
     if (props.invalid && props.shouldValidate && props.touched) {
@@ -14,6 +13,7 @@ const input = (props) => {
         validationError = <p className={classes.ValidationError}>Please enter a valid {props.elementConfig.placeholder}!</p>;
     }
     
+    let inputElement = null;
     switch (props.elementType) {
         case ('input'):
             inputElement = <input 

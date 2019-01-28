@@ -20,6 +20,7 @@ export class BurgerBuilder extends Component {
     }
     
     enablePurchase(ingredients) {
+        // enables ORDER NOW button if at least 1 ingredient is selected
         const sum = Object.keys(ingredients).map(igKey => {
             return ingredients[igKey];
         }).reduce((sum, el) => {
@@ -29,6 +30,7 @@ export class BurgerBuilder extends Component {
     }
     
     purchaseHandler = () => {
+        // if user isn't signed in, will redirect to authorization page
         if (this.props.isAuthenticated) {
             this.setState({purchasing: true});
         } else {

@@ -3,6 +3,9 @@ import classes from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
 
 const burger = (props) => {
+    /* to output ingredients dynamically on a screen, the object received by props 
+    needs to be converted into an array with as many elements as held by the value 
+    of a given key, then this array is mapped to BurgerIngredient component */
     let transIngredients = Object.keys(props.ingredients).map(igKey => {
         return [...Array(props.ingredients[igKey])].map((_, i) => {
             return <BurgerIngredient key={igKey + i} type={igKey} />;

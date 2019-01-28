@@ -111,3 +111,51 @@
     background: linear-gradient(#E99B75, #C93E29);
     margin: 2% auto;
 }
+
+.Pickles {  
+    position: relative;
+    width: 25%;
+    height: 4%;
+    background: linear-gradient(	#AB8601, #9C7807);
+    margin: 2% auto;
+    border-radius: 5px;
+}
+
+.Pickles:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 110%;
+  background: linear-gradient(	#AB8601, #9C7807);
+  border-radius: 5px;
+}
+
+.Pickles:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 110%;
+  background: linear-gradient(	#AB8601, #9C7807);
+  border-radius: 5px;
+}
+
+.Tomatoes {
+   width: 41%;
+   height: 5%;
+   background: linear-gradient(		#EB7C2B, #D65202);
+   border-radius: 8px;
+   margin: 2% 8%;
+   position: relative;
+}
+
+.Tomatoes:after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 105%; 
+   background: linear-gradient(		#EB7C2B, #D65202);
+   border-radius: 8px;
+}
