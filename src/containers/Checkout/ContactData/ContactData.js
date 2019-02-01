@@ -89,12 +89,20 @@ class ContactData extends Component {
         for (let formElementIdentifier in this.state.orderForm) {
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
         }
+        
+        const today = new Date();
+        const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        const time = today.getHours() + ":" + ('0'+today.getMinutes()).slice(-2);
+        const dateTime = date+', '+time;
+    
+        
         const order = {
             ingredients: this.props.ings,
             // in production the price should be calculated on the server side
             price: this.props.price,
             orderData: formData,
-            userId: this.props.userId
+            userId: this.props.userId,
+            date: dateTime
         };
         this.props.onOrderBurger(order, this.props.token);
     }

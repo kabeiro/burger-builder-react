@@ -10,15 +10,18 @@ const order = (props) => {
         });
     }
     const ingredientOutput = ingredients.map(ig => {
-       return <span 
+       if (ig.amount > 0) {
+           return <span 
             className={classes.Ingredient}
             key={ig.name}>{ig.name} ({ig.amount})</span>;
+       }
     });
     
     return (
         <div className={classes.Order}>
-            <p>Ingredients: {ingredientOutput}</p>
-            <p>Price: <strong>USD {Number.parseFloat(props.price).toFixed(2)}</strong></p>
+            <p><em>Date:</em> {props.date}</p>
+            <p><em>Ingredients:</em> {ingredientOutput}</p>
+            <p><em>Price:</em> USD {Number.parseFloat(props.price).toFixed(2)}</p>
         </div>
     );
 };
