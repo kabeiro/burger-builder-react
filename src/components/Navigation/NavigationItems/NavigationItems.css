@@ -55,5 +55,6 @@
         background-color: #D0DAE3;
         border-bottom: 4px solid #932419;
         color: #1F2326;
+        transition: all 0.3s ease-in-out;
     }
 }

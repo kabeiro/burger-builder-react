@@ -19,22 +19,22 @@ class BurgerIngredient extends Component {
                 );
                 break;
             case ('meat'):
-                ingredient = <div className={classes.Meat}></div>;
+                ingredient = <div className={classes.Meat + " animated bounceInLeft"}></div>;
                 break;
             case ('cheese'):
-                ingredient = <div className={classes.Cheese}></div>;
+                ingredient = <div className={classes.Cheese + " animated bounceInRight"}></div>;
                 break;
             case ('bacon'):
-                ingredient = <div className={classes.Bacon}></div>;
+                ingredient = <div className={classes.Bacon + " animated bounceInLeft"}></div>;
                 break;
             case ('salad'):
-                ingredient = <div className={classes.Salad}></div>;
+                ingredient = <div className={classes.Salad + " animated bounceInRight"}></div>;
                 break;
             case ('tomatoes'):
-                ingredient = <div className={classes.Tomatoes}></div>;
+                ingredient = <div className={classes.Tomatoes + " animated flipInX"}></div>;
                 break;
             case ('pickles'):
-                ingredient = <div className={classes.Pickles}></div>;
+                ingredient = <div className={classes.Pickles + " animated flipInX"}></div>;
                 break;
         }
         

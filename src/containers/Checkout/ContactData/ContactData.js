@@ -149,7 +149,7 @@ class ContactData extends Component {
             form = <Spinner />;
         }
         return (
-            <div className={classes.ContactData}>
+            <div className={classes.ContactData + " animated fadeInDown"}>
                 <h4>Enter your contact data:</h4>
                 {form}
             </div>    
