@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Burger.css';
-import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
+import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = (props) => {
     /* to output ingredients dynamically on a screen, the object received by props 
@@ -15,7 +15,7 @@ const burger = (props) => {
     }, []);
     
     if (transIngredients.length === 0) {
-        transIngredients = <p>Please start adding ingredients.</p>
+        transIngredients = <p>Please start adding ingredients.</p>;
     }
     
     return (
